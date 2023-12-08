@@ -69,4 +69,4 @@ teams = pd.concat([df['Home'], df['Away']]).unique()
 # Loop through each team and get their last 5 matches and points
 for team in teams:
     last_5_per_team[team], last_5_per_team[team + '_points'] = get_last_5_matches(team, matches)
-k = 10
+k = 100
