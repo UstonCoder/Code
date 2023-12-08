@@ -38,7 +38,7 @@ home_stats["points"] = df.groupby(";Home")["Home_Points"].sum()
 away_stats["points"] = df.groupby("Away")["Away_Points"].sum()
 
 
-
+fv =  9
 #Last Performances
 matches = df[['Date', 'Home', 'Away', 'Home_Points', 'Away_Points']].copy()
 # Function to get the last 5 games for a team
