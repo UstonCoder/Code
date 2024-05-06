@@ -34,11 +34,11 @@ away_stats["Games"] = df.groupby("Away")["Away"].count()
 df["Home_Points"] = df.apply(lambda x: 3 if x["HomeGoals"]>x["AwayGoals"] else 0 if x["HomeGoals"] < x["AwayGoals"] else 1,axis=1)
 df["Away_Points"] = df.apply(lambda x: 3 if x["HomeGoals"]<x["AwayGoals"] else 0 if x["HomeGoals"] > x["AwayGoals"] else 1,axis=1)
 
-home_stats["points"] = df.groupby(";Home")["Home_Points"].sum()
+home_stats["points"] = df.groupby("Home")["Home_Points"].sum()
 away_stats["points"] = df.groupby("Away")["Away_Points"].sum()
 
 
-fv =  9
 #Last Performances
 matches = df[['Date', 'Home', 'Away', 'Home_Points', 'Away_Points']].copy()
 # Function to get the last 5 games for a team
+
